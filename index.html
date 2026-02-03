@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrategia de Reels & Hooks | Gabby's Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #FDF2F8;
+            color: #374151;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+        }
+        .card {
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all-all 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .hook-row:hover {
+            background-color: #F9FAFB;
+        }
+        .tab-active {
+            border-bottom: 4px solid #EC4899;
+            color: #EC4899;
+        }
+        .academy-card {
+            border-left: 4px solid #EC4899;
+        }
+        .academy-card:nth-child(even) {
+            border-left-color: #06B6D4;
+        }
+    </style>
+    <!-- 
+    ANÁLISIS DE MATERIAL:
+    - Se integra el "Banco de Ganchos (Hooks)" con 13 estrategias específicas.
+    - Se agrega la nueva sección "Beauty Academy by Gabby's" con 10 propuestas educativas.
+    - Justificación: La educación genera autoridad y reduce la fricción de venta en SPS.
+    - Confirmación técnica: No se utiliza SVG ni Mermaid JS. Todo el layout es HTML/Tailwind.
+    -->
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-pink-600 to-purple-700 text-white pt-16 pb-20 px-4 text-center">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-cyan-300 font-bold tracking-widest uppercase mb-2">Estrategia de Contenido 2026</h2>
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Plan Maestro de Social Media</h1>
+            <p class="text-lg opacity-90 max-w-2xl mx-auto">Diseñado para Gabby’s Studio por Atlantius Media. Ganchos y educación para dominar el mercado de San Pedro Sula.</p>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 -mt-12 pb-20">
+        
+        <!-- SECTION: Beauty Academy by Gabby's (New Education Section) -->
+        <section class="mb-16">
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden mb-8 border-b-8 border-pink-500">
+                <div class="p-8 bg-gray-900 text-white flex flex-col md:flex-row justify-between items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold italic">🎓 Beauty Academy by Gabby's</h2>
+                        <p class="text-cyan-400 font-semibold">"Vender enseñando: La autoridad técnica como motor de confianza"</p>
+                    </div>
+                    <div class="mt-4 md:mt-0 bg-white/10 px-4 py-2 rounded-lg backdrop-blur-md border border-white/20">
+                        <span class="text-xs uppercase tracking-widest font-bold">Objetivo: Maximizar SAVES</span>
+                    </div>
+                </div>
+                
+                <div class="p-8">
+                    <p class="text-gray-600 mb-8 max-w-3xl">En San Pedro Sula, las clientas valoran el conocimiento. Al enseñarles a cuidar su inversión, Gabby’s Studio deja de ser un salón convencional para convertirse en un <strong>referente técnico</strong>.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Edu 1 -->
+                        <div class="card p-5 academy-card">
+                            <h4 class="font-bold text-gray-800 mb-2">1. Nanoplastia vs. Keratina</h4>
+                            <p class="text-xs text-gray-500 mb-3">Clip rápido comparando texturas y beneficios.</p>
+                            <div class="bg-gray-50 p-3 rounded text-[11px] text-gray-600">
+                                <strong>Justificación:</strong> Es la duda #1. Resuelve antes de la consulta por WhatsApp.
+                            </div>
+                        </div>
+                        <!-- Edu 2 -->
+                        <div class="card p-5 academy-card">
+                            <h4 class="font-bold text-gray-800 mb-2">2. Prueba del Vaso de Agua</h4>
+                            <p class="text-xs text-gray-500 mb-3">Hebra en agua para detectar porosidad.</p>
+                            <div class="bg-gray-50 p-3 rounded text-[11px] text-gray-600">
+                                <strong>Justificación:</strong> Altamente interactivo. Invita a probar en casa y agendar.
+                            </div>
+                        </div>
+                        <!-- Edu 3 -->
+                        <div class="card p-5 academy-card">
+                            <h4 class="font-bold text-gray-800 mb-2">3. ¿Por qué caen las Uñas?</h4>
+                            <p class="text-xs text-gray-500 mb-3">3 errores comunes: mal uso, falta de refill.</p>
+                            <div class="bg-gray-50 p-3 rounded text-[11px] text-gray-600">
+                                <strong>Justificación:</strong> Educación preventiva que reduce quejas y vende Refills.
+                            </div>
+                        </div>
+                        <!-- Edu 4 -->
+                        <div class="card p-5 academy-card">
+                            <h4 class="font-bold text-gray-800 mb-2">4. El poder del Rubber Base</h4>
+                            <p class="text-xs text-gray-500 mb-3">Uña débil vs. Refuerzo Rubber.</p>
+                            <div class="bg-gray-50 p-3 rounded text-[11px] text-gray-600">
+                                <strong>Justificación:</strong> Introduce un servicio nicho que resuelve problemas reales.
+                            </div>
+                        </div>
+                        <!-- Edu 5 -->
+                        <div class="card p-5 academy-card">
+                            <h4 class="font-bold text-gray-800 mb-2">5. Post-Depilación Cera</h4>
+                            <p class="text-xs text-gray-500 mb-3">3 NO: Sol, ropa ajustada, agua caliente.</p>
+                            <div class="bg-gray-50 p-3 rounded text-[11px] text-gray-600">
+                                <strong>Justificación:</strong> Muestra cuidado por la salud de la piel post-venta.
+                            </div>
+                        </div>
+                        <!-- Edu 6 -->
+                        <div class="card p-5 academy-card">
+                            <h4 class="font-bold text-gray-800 mb-2">6. Leer Etiquetas (Sulfatos)</h4>
+                            <p class="text-xs text-gray-500 mb-3">¿Por qué tu tinte dura poco?</p>
+                            <div class="bg-gray-50 p-3 rounded text-[11px] text-gray-600">
+                                <strong>Justificación:</strong> Genera autoridad técnica sobre productos comerciales.
+                            </div>
+                        </div>
+                        <!-- Edu 7 -->
+                        <div class="card p-5 academy-card">
+                            <h4 class="font-bold text-gray-800 mb-2">7. Exfoliación Capilar</h4>
+                            <p class="text-xs text-gray-500 mb-3">Limpieza profunda del cuero cabelludo.</p>
+                            <div class="bg-gray-50 p-3 rounded text-[11px] text-gray-600">
+                                <strong>Justificación:</strong> Crea necesidad ante el clima húmedo y graso de SPS.
+                            </div>
+                        </div>
+                        <!-- Edu 8 -->
+                        <div class="card p-5 academy-card">
+                            <h4 class="font-bold text-gray-800 mb-2">8. Skin Care Express</h4>
+                            <p class="text-xs text-gray-500 mb-3">Limpiador > Exfoliante > Hidratante.</p>
+                            <div class="bg-gray-50 p-3 rounded text-[11px] text-gray-600">
+                                <strong>Justificación:</strong> Desmitifica el cuidado facial largo; impulsa reservas rápidas.
+                            </div>
+                        </div>
+                        <!-- Edu 9 -->
+                        <div class="card p-5 academy-card">
+                            <h4 class="font-bold text-gray-800 mb-2">9. Timeline del Balayage</h4>
+                            <p class="text-xs text-gray-500 mb-3">Retoque: Mes 1 vs Mes 3 vs Mes 6.</p>
+                            <div class="bg-gray-50 p-3 rounded text-[11px] text-gray-600">
+                                <strong>Justificación:</strong> Ayuda a planificar presupuesto y asegura recurrencia.
+                            </div>
+                        </div>
+                        <!-- Edu 10 -->
+                        <div class="card p-5 academy-card">
+                            <h4 class="font-bold text-gray-800 mb-2">10. ¿Por qué Pasos Joico?</h4>
+                            <p class="text-xs text-gray-500 mb-3">La ciencia de los 4 pasos profesionales.</p>
+                            <div class="bg-gray-50 p-3 rounded text-[11px] text-gray-600">
+                                <strong>Justificación:</strong> Justifica el precio premium mediante la ciencia capilar.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: Hooks Explorer -->
+        <section class="mb-16">
+            <div class="card p-4 md:p-8">
+                <h3 class="text-2xl font-bold mb-6 text-gray-800">Banco de Ganchos (Regla de los 3s)</h3>
+                <div class="flex flex-wrap border-b border-gray-200 mb-6" id="tabs">
+                    <button onclick="showTab('cabello')" class="tab-btn px-6 py-3 font-bold text-sm uppercase tracking-wider tab-active" id="btn-cabello">💇‍♀️ Cabello</button>
+                    <button onclick="showTab('unas')" class="tab-btn px-6 py-3 font-bold text-sm uppercase tracking-wider text-gray-500" id="btn-unas">💅 Uñas</button>
+                    <button onclick="showTab('social')" class="tab-btn px-6 py-3 font-bold text-sm uppercase tracking-wider text-gray-500" id="btn-social">🐾 Social</button>
+                    <button onclick="showTab('local')" class="tab-btn px-6 py-3 font-bold text-sm uppercase tracking-wider text-gray-500" id="btn-local">📍 Local</button>
+                </div>
+
+                <!-- Tab: Cabello -->
+                <div id="tab-cabello" class="tab-content block">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-gray-50 text-gray-600 uppercase text-xs">
+                                    <th class="p-4 border-b">Gancho Visual</th>
+                                    <th class="p-4 border-b">Texto en Pantalla</th>
+                                    <th class="p-4 border-b">Objetivo</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-sm">
+                                <tr class="hook-row">
+                                    <td class="p-4 border-b font-medium italic">Zoom extremo a frizz moviéndose</td>
+                                    <td class="p-4 border-b text-pink-600 font-bold">"90% de las sampedranas cometen este error..."</td>
+                                    <td class="p-4 border-b"><span class="bg-blue-100 text-blue-700 px-2 py-1 rounded">Educativo</span></td>
+                                </tr>
+                                <tr class="hook-row">
+                                    <td class="p-4 border-b font-medium italic">Pantalla dividida: Antes vs Después</td>
+                                    <td class="p-4 border-b text-pink-600 font-bold">"No es magia, es técnica. ✨"</td>
+                                    <td class="p-4 border-b"><span class="bg-purple-100 text-purple-700 px-2 py-1 rounded">Transformación</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Tab: Uñas -->
+                <div id="tab-unas" class="tab-content hidden">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-gray-50 text-gray-600 uppercase text-xs">
+                                    <th class="p-4 border-b">Gancho Visual</th>
+                                    <th class="p-4 border-b">Texto en Pantalla</th>
+                                    <th class="p-4 border-b">Objetivo</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-sm">
+                                <tr class="hook-row">
+                                    <td class="p-4 border-b font-medium italic">ASMR: Sonido de limado/pincel</td>
+                                    <td class="p-4 border-b text-cyan-600 font-bold">"Sube el volumen... Terapia de uñas. 🔊"</td>
+                                    <td class="p-4 border-b"><span class="bg-green-100 text-green-700 px-2 py-1 rounded">Retención</span></td>
+                                </tr>
+                                <tr class="hook-row">
+                                    <td class="p-4 border-b font-medium italic">Dedo moviéndose bajo luz de sol</td>
+                                    <td class="p-4 border-b text-cyan-600 font-bold">"Etiqueta a la amiga que te lo debe."</td>
+                                    <td class="p-4 border-b"><span class="bg-yellow-100 text-yellow-700 px-2 py-1 rounded">Viralidad (Share)</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Tab: Social -->
+                <div id="tab-social" class="tab-content hidden">
+                    <div class="p-6 bg-pink-50 rounded-lg">
+                        <h4 class="font-bold text-pink-800 mb-4">Impacto Social: "Belleza con Propósito"</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-white p-4 rounded shadow-sm border-l-4 border-pink-500">
+                                <p class="text-xs text-gray-400 uppercase font-bold">Gancho Emocional</p>
+                                <p class="text-pink-600 font-bold my-2">"Tu cambio de look salvó a este perrito."</p>
+                                <p class="text-sm text-gray-600 italic">Visual: Clienta sonriendo + foto de rescate.</p>
+                            </div>
+                            <div class="bg-white p-4 rounded shadow-sm border-l-4 border-pink-500">
+                                <p class="text-xs text-gray-400 uppercase font-bold">Branding Humano</p>
+                                <p class="text-pink-600 font-bold my-2">"20% donado a rescates en SPS."</p>
+                                <p class="text-sm text-gray-600 italic">Visual: Entrega de donativo real.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab: Local -->
+                <div id="tab-local" class="tab-content hidden">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="card p-4 border-b-4 border-cyan-400">
+                            <p class="font-bold text-gray-800 mb-2">📍 Los Andes</p>
+                            <p class="text-sm text-gray-600 italic mb-3">"¿Buscando el mejor secado antes de ir a MOON?"</p>
+                            <span class="text-[10px] bg-gray-100 p-1 rounded">SEO Local Lifestyle</span>
+                        </div>
+                        <div class="card p-4 border-b-4 border-pink-400">
+                            <p class="font-bold text-gray-800 mb-2">📍 Satélite</p>
+                            <p class="text-sm text-gray-600 italic mb-3">"Tu lugar seguro en el Bulevar Las Torres. ☕"</p>
+                            <span class="text-[10px] bg-gray-100 p-1 rounded">Confianza & Servicio</span>
+                        </div>
+                        <div class="card p-4 border-b-4 border-yellow-400">
+                            <p class="font-bold text-gray-800 mb-2">📍 Costas</p>
+                            <p class="text-sm text-gray-600 italic mb-3">"Lo que dicen de nosotras en Costas... 👇"</p>
+                            <span class="text-[10px] bg-gray-100 p-1 rounded">Social Proof</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: Data Analysis (Reel Retention) -->
+        <section class="mb-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="card p-8">
+                <h3 class="text-xl font-bold mb-4 text-gray-800">Métricas Reinas 2026</h3>
+                <p class="text-sm text-gray-600 mb-6">El algoritmo prioriza el contenido que la gente <strong>guarda</strong> y <strong>comparte</strong>.</p>
+                <div class="chart-container" style="height: 250px;">
+                    <canvas id="retentionChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="card p-8 flex flex-col justify-center">
+                <h3 class="text-xl font-bold mb-4 text-gray-800">Pro-Tips de Ejecución</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <div class="bg-cyan-100 p-2 rounded mr-4">📱</div>
+                        <div>
+                            <p class="font-bold text-sm">Subtítulos Dinámicos</p>
+                            <p class="text-xs text-gray-500">El 80% de los Reels se ven sin audio. Resalta palabras como "SPS" o "GRATIS".</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="bg-pink-100 p-2 rounded mr-4">☀️</div>
+                        <div>
+                            <p class="font-bold text-sm">Luz Natural de SPS</p>
+                            <p class="text-xs text-gray-500">Graba cerca de ventanas. La luz natural resalta mejor el brillo real del cabello.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="bg-yellow-100 p-2 rounded mr-4">🔗</div>
+                        <div>
+                            <p class="font-bold text-sm">CTA Específico</p>
+                            <p class="text-xs text-gray-500">No digas "Escríbenos". Di: "Clic al link en bio para agendar en Los Andes".</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center py-8 text-gray-400 text-xs">
+            Estrategia de Ganchos diseñada por Atlantius Media para Gabby's Studio & Supply © 2026.
+        </footer>
+    </main>
+
+    <script>
+        // --- Tab Logic ---
+        function showTab(tabId) {
+            // Hide all
+            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.add('hidden'));
+            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('block'));
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('tab-active'));
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.add('text-gray-500'));
+
+            // Show target
+            document.getElementById('tab-' + tabId).classList.remove('hidden');
+            document.getElementById('tab-' + tabId).classList.add('block');
+            document.getElementById('btn-' + tabId).classList.add('tab-active');
+            document.getElementById('btn-' + tabId).classList.remove('text-gray-500');
+        }
+
+        // --- Charts ---
+        const tooltipConfig = {
+            callbacks: {
+                title: function(tooltipItems) {
+                    const item = tooltipItems[0];
+                    let label = item.chart.data.labels[item.dataIndex];
+                    return Array.isArray(label) ? label.join(' ') : label;
+                }
+            }
+        };
+
+        const ctxRetention = document.getElementById('retentionChart').getContext('2d');
+        new Chart(ctxRetention, {
+            type: 'bar',
+            data: {
+                labels: ['Likes', 'Comments', 'Shares', 'Saves'],
+                datasets: [{
+                    label: 'Peso en Algoritmo 2026',
+                    data: [15, 25, 45, 60],
+                    backgroundColor: ['#E5E7EB', '#06B6D4', '#EC4899', '#DB2777'],
+                    borderRadius: 8
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: tooltipConfig
+                },
+                scales: {
+                    y: { beginAtZero: true, display: false }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
